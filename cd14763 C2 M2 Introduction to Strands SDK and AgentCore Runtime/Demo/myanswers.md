@@ -112,12 +112,15 @@ Try this:
 
 
 1. Find the codebuild.py file
+   
 Run this command in PowerShell:
+
 ```
 python -c "import importlib.util; s=importlib.util.find_spec('bedrock_agentcore_starter_toolkit.services.codebuild'); print(s.origin if s else 'Module not found')"
 ```
 
 If the module is installed in this environment, you'll get a path resembling:
+
 D:\...\ .venv\Lib\site-packages\bedrock_agentcore_starter_toolkit\services\codebuild.py
 
 
@@ -136,7 +139,10 @@ If you see a line resembling:
 then the workaround may apply to your installed toolkit.
 
 3. If the exact setting exists, apply the workaround safely
-Before changing the toolkit, create a backup. Run:
+   
+Before changing the toolkit, create a backup. 
+
+Run:
 
 ```
 Copy-Item $file "$file.bak"
@@ -168,6 +174,8 @@ The workaround was reported to solve a specific lab-account restriction. It isn'
 
 
 ## Answers From WanderBot
+
+**First Question:**
 
 ```
 agentcore invoke '{\"message\": \"How do I contact Horizon Travel customer support?\"}'
@@ -201,7 +209,7 @@ Available 24/7 on our website at (https://www.horizontravel.com) - look for the 
 For fastest service, please have your booking reference number ready when contacting support.
 ```
 
-
+**Second Question**
 
 ```
 agentcore invoke '{\"message\": \"A flight costs $349. Hotel is $145/night for 4 nights. Transfers are $35 each way. What is my total?\"}'
