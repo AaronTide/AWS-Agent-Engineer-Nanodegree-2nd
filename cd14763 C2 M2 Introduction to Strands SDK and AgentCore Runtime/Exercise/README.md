@@ -97,3 +97,44 @@ agentcore invoke '{"message": "My trip is $349 flight + $175/night × 4 nights +
 | `agentcore dev` fails to start | Check if you have installed the required modules locally |
 | Deploy errors with a conflict | Re-run with `--auto-update-on-conflict` |
 | Agent ignores the calculator | Make the system prompt explicit: "always use the calculator tool" |
+
+
+## My Solution's results:
+
+**Question 1**
+
+```
+agentcore invoke '{\"message\": \"How do I contact Horizon Travel customer support?\"}'
+```
+
+
+```
+Response:
+
+You can reach Horizon Travel customer support at **+012 33 33 33**. 
+
+For more information, you can also visit their official website at **horizontravels.com**.
+
+Have a wonderful trip!
+```
+
+
+**Question 2**
+
+```
+agentcore invoke '{\"message\": \"A flight costs $349. Hotel is $145/night for 4 nights. Transfers are $35 each way. What is my total?\"}'
+```
+
+
+```
+Response:
+Your total cost would be **$999**. This includes:
+- Flight: $349
+- Hotel (4 nights): $580 ($145 x 4)
+- Transfers (each way): $70 ($35 x 2)
+
+Have a wonderful trip!
+```
+
+
+*Thus, we have confirmed that my solution is up to the mark*
